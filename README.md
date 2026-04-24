@@ -1,42 +1,26 @@
-# Spotlight
+# kaseyculmback.com
 
-Spotlight is a [Tailwind UI](https://tailwindui.com) site template built using [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.org).
+Personal portfolio site for Kasey Culmback. Built with [Astro](https://astro.build), styled with [Tailwind CSS](https://tailwindcss.com), and deployed to GitHub Pages.
 
-## Getting started
-
-To get started with this template, first install the npm dependencies:
+## Development
 
 ```bash
 npm install
-```
-
-Next, create a `.env.local` file in the root of your project and set the `NEXT_PUBLIC_SITE_URL` variable to your site's public URL:
-
-```
-NEXT_PUBLIC_SITE_URL=https://example.com
-```
-
-Next, run the development server:
-
-```bash
 npm run dev
 ```
 
-Finally, open [http://localhost:3000](http://localhost:3000) in your browser to view the website.
+Open [http://localhost:4321](http://localhost:4321) in your browser.
 
-## Customizing
+## Build
 
-You can start editing this template by modifying the files in the `/src` folder. The site will auto-update as you edit these files.
+```bash
+npm run build    # outputs to ./dist
+npm run preview  # preview the build locally
+```
 
-## License
+## Stack
 
-This site template is a commercial product and is licensed under the [Tailwind UI license](https://tailwindui.com/license).
-
-## Learn more
-
-To learn more about the technologies used in this site template, see the following resources:
-
-- [Tailwind CSS](https://tailwindcss.com/docs) - the official Tailwind CSS documentation
-- [Next.js](https://nextjs.org/docs) - the official Next.js documentation
-- [Headless UI](https://headlessui.dev) - the official Headless UI documentation
-- [MDX](https://mdxjs.com) - the MDX documentation
+- [Astro](https://astro.build) — static site framework
+- [Svelte](https://svelte.dev) — theme toggle island
+- [Tailwind CSS](https://tailwindcss.com) — styling
+- GitHub Actions — deploys to GitHub Pages on push to `main`
