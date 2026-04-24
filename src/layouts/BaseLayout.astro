@@ -1,0 +1,47 @@
+---
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import '../styles/global.css'
+
+interface Props {
+  title?: string
+  description?: string
+}
+
+const {
+  title = 'Kasey Culmback - Software Engineer',
+  description = "I'm Kasey, a Software Engineer based in Mount Vernon, WA. I've been coding full-time since 2017 and specialize in Front-End Engineering with React, Vue, and TypeScript.",
+} = Astro.props
+---
+
+<html lang="en" class="h-full antialiased">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.ico" />
+    <script is:inline>
+      const stored = localStorage.getItem('theme')
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+      if (stored === 'dark' || (!stored && prefersDark)) {
+        document.documentElement.classList.add('dark')
+      }
+    </script>
+  </head>
+  <body class="flex h-full bg-zinc-50 dark:bg-black">
+    <div class="fixed inset-0 flex justify-center sm:px-8">
+      <div class="flex w-full max-w-7xl lg:px-8">
+        <div class="w-full bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20">
+        </div>
+      </div>
+    </div>
+    <div class="relative flex w-full flex-col">
+      <Header />
+      <main class="flex-auto">
+        <slot />
+      </main>
+      <Footer />
+    </div>
+  </body>
+</html>

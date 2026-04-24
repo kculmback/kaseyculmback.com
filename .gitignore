@@ -1,6 +1,5 @@
 node_modules
-.next
-out
+dist
 
 # Mac OSX
 .DS_Store
@@ -23,4 +22,3 @@ Desktop.ini
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
-
